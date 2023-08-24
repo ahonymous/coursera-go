@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+    coursera:
+        container_name: coursera
+        stdin_open: true
+        tty: true
+        build:
+            context: .
+            dockerfile: ./docker/Dockerfile
+            target: dev

@@ -1,0 +1,5 @@
+.idea/
+.git
+.DS_Store
+.dockerignore
+.gitignore
