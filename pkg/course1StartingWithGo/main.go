@@ -17,13 +17,13 @@ var modules = [7]string{
 	"4. Module 3: Slice reads integers from the user until the user enters the character X instead of an integer. Then prints the integers in the reverse order that they were read.",
 	"5. Module 4: Makejson reads a name and an address from the user, stores them in a map, and then converts the map to JSON and prints it.",
 	"6. Final: Reads a file containing a list of names, and then prints the content of the file to the screen.",
-	"0. Exit",
+	"0. Back to main menu",
 }
 
 func Start() {
 	for {
 		fmt.Println("What homework are you want to check? (any not numeric symbol to exit)")
-		fmt.Println("========================================")
+		fmt.Println("----------------------------------------")
 
 		for _, module := range modules {
 			fmt.Println(module)
@@ -31,7 +31,7 @@ func Start() {
 		_, err := fmt.Scan(&moduleNumber)
 
 		if nil != err || 0 == moduleNumber {
-			fmt.Println("Exit...")
+			fmt.Println("Back...")
 
 			return
 		}
