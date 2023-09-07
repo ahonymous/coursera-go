@@ -3,13 +3,15 @@ package course2FunctionsMethodsInterfaceswithGo
 import (
 	"coursera/pkg/course2FunctionsMethodsInterfaceswithGo/module1"
 	"coursera/pkg/course2FunctionsMethodsInterfaceswithGo/module2"
+	"coursera/pkg/course2FunctionsMethodsInterfaceswithGo/module3"
 	"fmt"
 )
 
 var moduleNumber int
-var modules = [3]string{
+var modules = [4]string{
 	"1. Bubble sort",
 	"2. Speed calculation",
+	"3. Animal actions",
 	"0. Back to main menu",
 }
 
@@ -34,6 +36,8 @@ func Start() {
 			module1.Sort()
 		case 2:
 			module2.Speed()
+		case 3:
+			module3.Start()
 		}
 
 		fmt.Println("----------------------------------------")
