@@ -1,15 +1,18 @@
 package main
 
 import (
+	"fmt"
+
 	"coursera/pkg/course1StartingWithGo"
 	"coursera/pkg/course2FunctionsMethodsInterfaceswithGo"
-	"fmt"
+	"coursera/pkg/course3ConcurrencyInGo"
 )
 
 var courseNumber int
-var courses = [3]string{
+var courses = [4]string{
 	"1. Course 1: Starting with Go",
 	"2. Course 2: Functions, Methods, and Interfaces in Go",
+	"3. Course 3: Concurrency in Go",
 	"0. Exit",
 }
 
@@ -34,6 +37,8 @@ func main() {
 			course1StartingWithGo.Start()
 		case 2:
 			course2FunctionsMethodsInterfaceswithGo.Start()
+		case 3:
+			course3ConcurrencyInGo.Start()
 		}
 
 		fmt.Println("========================================")
