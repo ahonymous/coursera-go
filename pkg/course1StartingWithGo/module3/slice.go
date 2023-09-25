@@ -1,42 +1,42 @@
 package module3
 
 import (
-	"fmt"
-	"sort"
-	"strconv"
-	"strings"
+    "fmt"
+    "sort"
+    "strconv"
+    "strings"
 )
 
 func Slice() {
-	intSlice := make([]int, 3)
+    intSlice := make([]int, 3)
 
-	for {
-		fmt.Print("Enter an integer (X to quit): ")
-		var input string
-		_, err := fmt.Scanln(&input)
+    for {
+        fmt.Print("Enter an integer (X to quit): ")
+        var input string
+        _, err := fmt.Scanln(&input)
 
-		if err != nil {
-			fmt.Println("Something went wrong:", err)
+        if err != nil {
+            fmt.Println("Something went wrong:", err)
 
-			break
-		}
+            break
+        }
 
-		input = strings.ToLower(input)
-		if "x" == input {
-			fmt.Println("Exit...")
+        input = strings.ToLower(input)
+        if "x" == input {
+            fmt.Println("Exit...")
 
-			break
-		}
+            break
+        }
 
-		number, err := strconv.Atoi(input)
-		if err != nil {
-			fmt.Println("Please, enter a valid integer number and try again.")
+        number, err := strconv.Atoi(input)
+        if err != nil {
+            fmt.Println("Please, enter a valid integer number and try again.")
 
-			continue
-		}
+            continue
+        }
 
-		intSlice = append(intSlice, number)
-		sort.Ints(intSlice)
-		fmt.Println("The sorted slice is:", intSlice)
-	}
+        intSlice = append(intSlice, number)
+        sort.Ints(intSlice)
+        fmt.Println("The sorted slice is:", intSlice)
+    }
 }
